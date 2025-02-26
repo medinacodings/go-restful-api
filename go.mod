@@ -1,4 +1,4 @@
-module github.com/aronipurwanto/go-restful-api
+module github.com/medinacodings/go-restful-api
 
 go 1.23.2
 
