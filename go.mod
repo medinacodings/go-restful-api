@@ -3,10 +3,14 @@ module github.com/medinacodings/go-restful-api
 go 1.23.2
 
 require (
+	github.com/aronipurwanto/go-restful-api v0.0.0-20250226050008-c7e024268088
 	github.com/go-playground/validator/v10 v10.9.0
 	github.com/go-sql-driver/mysql v1.9.0
 	github.com/gofiber/fiber/v2 v2.52.6
+	github.com/google/wire v0.6.0
 	github.com/stretchr/testify v1.7.0
+	gorm.io/driver/mysql v1.5.7
+	gorm.io/gorm v1.25.12
 )
 
 require (
@@ -31,6 +35,4 @@ require (
 	golang.org/x/sys v0.30.0 // indirect
 	golang.org/x/text v0.22.0 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
-	gorm.io/driver/mysql v1.5.7 // indirect
-	gorm.io/gorm v1.25.12 // indirect
 )
