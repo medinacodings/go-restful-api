@@ -10,6 +10,8 @@ import (
 	"github.com/go-playground/validator/v10"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/gofiber/fiber/v2"
+	_ "gorm.io/driver/mysql"
+	_ "gorm.io/gorm"
 	"log"
 )
 
@@ -20,8 +22,14 @@ func main() {
 	// Initialize Database
 	db := app.NewDB()
 
+	// Define the MySQL connection string
+	_ = "root:Phainonphysicaldestruction#89@tcp(localhost:3306)/go_restful_api?charset=utf8mb4&parseTime=True&loc=Local"
+
 	// Run Auto Migration (Opsional, bisa dihapus jika tidak diperlukan)
+
 	err := db.AutoMigrate(&domain.Category{})
+	err = db.AutoMigrate(&domain.Product{})
+	err = db.AutoMigrate(&domain.Employee{})
 	helper.PanicIfError(err)
 
 	// Initialize Validator
